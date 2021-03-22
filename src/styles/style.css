@@ -3,7 +3,7 @@
   src: url(../assets:fonts/Open_Sans/OpenSans-Regular.ttf); 
 }
   @font-face {
-  font-family: 'Neucha';
+  font-family: 'Neucha'; 
   src: url(../assets:fonts/Neucha/Neucha-Regular.ttf); 
 }
 /*
@@ -28,11 +28,13 @@
  h1 {
    font-size: 72px; 
    line-height: 1.2em;
-   font-family: 'Neucha';
+   font-family: 'Neucha', sans-serif;
+   font-weight: normal;
  }
  .header-h1 h1{
-    margin-left: -20px;
+    margin-left: 5px;
     margin-top: 0;
+    
  }
  h2 {
     font-size: 60px;
@@ -51,10 +53,11 @@
  section {
     width: 100%;
     padding: 100px 0;
+    
  }
  .section-bg {
     position:relative;
-    overflow:hidden;
+    
  }
  .section-bg::before {
     background-repeat: no-repeat;
@@ -66,6 +69,9 @@
     top: 0;
     background-image: url(../pictures/background.png);
     content: '';
+    right: 0;
+    bottom:0;
+    
  }
  .section-light {
     background-color: #f5f4f0;
@@ -88,22 +94,28 @@
  }
 
  /* Header */
- .header-h1{
-    z-index: 5;
+ .header {
+ padding-bottom: 25px;
+ 
+   overflow: hidden;
+ }
+ 
+ .header-h1 h1{
+    z-index: 0;
  }
  .main-img {
 	position: absolute;
 	height: 525px;
-	top: 35px;
-	right: -320px;
-    z-index: 1;
+	top: 50px;
+	right: -310px;
+    z-index: 6;
  }
  .textcols {
     position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-top: 210px;
+    margin-top: 175px;
     margin-left: 10px;
     margin-bottom: 40px;
     margin-right: -30px;
@@ -112,7 +124,7 @@
     width: 50%;
  }
  .textcols-item + .textcols-item {
-    margin-left: 30px;
+   margin-left: 30px;
  }
  .textcols-item p {
     margin-bottom: 10px;
@@ -125,6 +137,7 @@
     text-decoration: none;
     font-weight: bold;
     margin-left: 590px; 
+    
  }
  .info:hover {
     background: #EA7600;
@@ -132,20 +145,26 @@
     color: white; 
     text-decoration: none;
     font-weight: bold;
+   
  }
   /* Section-video */
  .content-page2 {
     width: 100%;
  }
  .section-video {
-    margin-bottom: -200px;
+   
+    padding-top: 20px;
  }
  .video-page {
    background: #FFFFFF;
    text-align: center;
+
  } 
+ 
  .page2-p {
-    margin: 30px auto;
+    
+    margin-top: -20px;
+    margin-bottom: 30px;
  }
  .video {
     filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15)); 
@@ -153,35 +172,39 @@
     display: block;
     text-align: center;
     border-width: 0px;
+    margin-bottom: -200px;
 }
 /* Section navigation"*/
  .navigation {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    justify-content: space-between;
-  
+    justify-content: center;
     width: 100%;
-    margin-top: 100px;
  }
  
  .navigation__item {
-    display: block;
-    max-width: 350px;
-    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 350px;
+    
     padding: 24px;
+    margin:10px 10px;
     background-color: #f5f4f0;
+    list-style-type: none;
     transition:  0.1s linear, color 0.1s linear;
  }
  
  .navigation__item:first-child {
     padding: 0;
     background-color: #42413c;
+    margin-top: -30px;
  }
  
  .navigation__title {
     color: #fff;
     font-size: 52px;
+    font-weight: normal;
+    
  }
  
  .navigation__link {
@@ -192,7 +215,7 @@
  }
  
  .item--number {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     font-size: 64px;
     font-family: "Neucha", cursive;
     line-height: 1;
@@ -203,7 +226,6 @@
  }
  
  .item--content {
-    margin-bottom: 0;
     color: #2a2626;
  }
  
@@ -223,6 +245,7 @@
 	flex-wrap: wrap;
 	width: 100%;
     margin-top: -100px;
+    margin-left: 6px;
  }
  .top-row-item {
 	display: flex;
@@ -235,6 +258,7 @@
  }
  .top-row-item h2 {
     margin-top: -30px;
+    font-weight: normal;
  }
  .suptitle p {
     font-size: 24px;
@@ -261,8 +285,9 @@
  .divider h4 {
     padding:  5px 10px 5px ;
     font-weight: bold;
-    margin-top:100px;
-    margin-bottom: 20px;
+    margin-top: 85px;
+    margin-bottom: 10px;
+    font-size: 14px;
  }
  .divider-light {
     background:#FFFFFF;
@@ -277,7 +302,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: -100px;
+    margin-bottom: -125px;
  }
  .bottom-item {
     width: 50%;
